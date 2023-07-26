@@ -9,7 +9,7 @@ To push your work to this repo you should follow the steps below:
    ```
    Example:
    ```
-   git clone https://github.com/ARK-X-Digital/Team-X-MERN-REPO.git
+   git clone https://github.com/ARK-X-Digital/Team-X-MERN.git
    ```
    
    ------------------------------------------
