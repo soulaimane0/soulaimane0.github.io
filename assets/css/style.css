@@ -1,0 +1,327 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;500;600;700&family=Inter&display=swap');
+
+:root {
+
+    --color-body: #393E46;
+    --color-heading: #222831;
+    --color-base: #EEEEEE;
+    --color-base2: #fff;
+    --color-brand: #00ABE4;
+    --color-brand2: #2373ff;
+
+    --color-twitter: #00acee;
+    --color-github: #171515;
+    --color-linkedin: #0A66C2;
+    --sidebar-width: 240px;
+    --font-base: "Bai Jamjuree";
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    /* background-color: var(--color-base2); */
+    /* background: rgb(233, 241, 250);
+    background: linear-gradient(90deg, rgba(233, 241, 250, 1) 41%, rgba(255, 255, 255, 1) 81%); */
+    background: rgb(233, 241, 250);
+    background: linear-gradient(148deg, rgba(233, 241, 250, 1) 41%, rgba(255, 255, 255, 1) 81%);
+    color: var(--color-body);
+    font-family: var(--font-base), sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--color-heading);
+    font-weight: 700;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-body);
+    transition: all 0.4s ease;
+}
+
+a:hover {
+    color: var(--color-brand);
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+.text-brand {
+    color: var(--color-brand);
+}
+
+.bg-base {
+    /* background-color: var(--color-base2); */
+    background: linear-gradient(20deg, rgba(255, 255, 255, 1) 31%, rgba(233, 241, 250, 1) 90%);
+    /* box-shadow: rgba 0px 8px 24px; */
+    box-shadow: rgba(233, 241, 250, 1) 0px 7px 29px 0px;
+}
+
+.shadow-effect {
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.shadow-effect:hover {
+    /* box-shadow: -6px 6px 0 0 var(--color-brand); */
+    transform: scale(1.04);
+}
+
+.iconbox {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    background-color: var(--color-brand);
+    color: var(--color-base);
+}
+
+.navbar {
+    background: rgb(233, 241, 250);
+    background: linear-gradient(148deg, rgba(233, 241, 250, 1) 41%, rgba(255, 255, 255, 1) 81%);
+}
+
+.navbar ul {
+    gap: 0.5rem;
+}
+
+.navbar ul li a {
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    font-weight: 600;
+    letter-spacing: 0.4px;
+}
+
+.navbar ul li a:hover,
+.navbar ul li .nav-link.active {
+    color: var(--color-brand)
+}
+
+.full-height {
+    min-height: 100vh;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.card-custom-image {
+    height: 300px;
+}
+
+.card-custom-image img {
+    object-fit: cover;
+}
+
+.social-icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    padding: 1.4rem;
+}
+
+.social-icon .fa-brands {
+    color: #fff;
+    font-size: 1.6rem;
+}
+
+.social-icon.linkedin {
+    background-color: var(--color-linkedin);
+}
+
+.social-icon.github {
+    background-color: var(--color-github);
+}
+
+.social-icon.twitter {
+    background-color: var(--color-twitter);
+}
+
+.avatar .myPicture {
+    filter: grayscale(0.3);
+}
+
+.avatar {
+    width: 250px;
+}
+
+.avatar span {
+    width: 50px;
+    height: 50px;
+}
+
+.avatar span img {
+    border-radius: 0.2rem;
+}
+
+.avatar .javascript-icon {
+    top: 15%;
+    left: 0;
+    animation: javascriptMoves 3s linear infinite;
+}
+
+.avatar .typescript-icon {
+    top: 30%;
+    right: -5%;
+    animation: typescriptMoves 3s linear infinite;
+}
+
+.avatar .vuejs-icon {
+    bottom: 5%;
+    left: 15%;
+    animation: vueJsMoves 3s linear infinite;
+}
+
+@keyframes javascriptMoves {
+
+    0%,
+    50%,
+    100% {
+        top: 15%;
+    }
+
+    25% {
+        top: 19%;
+    }
+
+    75% {
+        top: 11%;
+    }
+}
+
+@keyframes typescriptMoves {
+
+    0%,
+    50%,
+    100% {
+        top: 30%;
+    }
+
+    25% {
+        top: 26%;
+    }
+
+    75% {
+        top: 34%;
+    }
+}
+
+@keyframes vueJsMoves {
+
+    0%,
+    50%,
+    100% {
+        bottom: 5%;
+    }
+
+    25% {
+        bottom: 9%;
+    }
+
+    75% {
+        bottom: 1%;
+    }
+}
+
+.cursor {
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--color-brand);
+    border-radius: 50%;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition: .1s;
+}
+
+.cursor-outline {
+    position: fixed;
+    width: 8px;
+    height: 8px;
+    background-color: var(--color-brand);
+    border-radius: 50%;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition: .15s;
+}
+
+::selection {
+    background-color: var(--color-brand);
+    color: var(--color-base);
+}
+
+@media screen and (min-width:992px) {
+    .navbar .navbar-brand img {
+        display: block;
+        border: 0.3rem solid var(--color-brand);
+    }
+
+    .main-header {
+        font-size: 2.9rem;
+    }
+
+    .avatar {
+        width: auto;
+    }
+
+}
+
+/* button style */
+.btn {
+    padding: 0.75rem 1.75rem;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.btn-brand {
+    background-color: var(--color-brand);
+    border-color: var(--color-brand);
+    color: var(--color-base2);
+}
+
+.btn-brand:hover,
+.btn-brand:focus,
+.btn-brand:active {
+    background-color: var(--color-brand2) !important;
+    border-color: var(--color-brand2) !important;
+    color: var(--color-base) !important;
+}
+
+.link-custom {
+    font-weight: 700;
+    position: relative;
+    font-size: 1.1rem;
+}
+
+.link-custom::after {
+    content: "";
+    width: 0%;
+    height: 2px;
+    background-color: var(--color-brand);
+    position: absolute;
+    left: 0;
+    top: 110%;
+    transition: all 0.4s;
+}
+
+.link-custom:hover::after {
+    width: 100%;
+}
