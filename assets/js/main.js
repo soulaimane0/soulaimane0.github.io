@@ -71,12 +71,20 @@ for (let i = 0; i < skills.length; i++) {
   skillsElement.insertAdjacentHTML('afterbegin', elem);
 }
 
+// Mouse move effect
 let cursorElem = document.querySelector('.cursor');
 let cursorOutlineElem = document.querySelector('.cursor-outline');
+let isCursorMoving = false;
 
 document.addEventListener('mousemove', (e) => {
-  cursorElem.style.cssText =
-    cursorOutlineElem.style.cssText = `left:${e.clientX}px; top:${e.clientY}px;`;
+  if (!isCursorMoving) {
+    isCursorMoving = true;
+    requestAnimationFrame(() => {
+      cursorElem.style.cssText =
+        cursorOutlineElem.style.cssText = `left:${e.clientX}px; top:${e.clientY}px;`;
+      isCursorMoving = false;
+    });
+  }
 });
 
 const submitBtn = document.querySelector('#btnSubmit');

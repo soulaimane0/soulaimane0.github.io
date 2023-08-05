@@ -237,6 +237,10 @@ img {
     }
 }
 
+.cursor .cursor-outline {
+    will-change: transform;
+}
+
 .cursor {
     position: fixed;
     width: 40px;
@@ -247,7 +251,7 @@ img {
     top: 0;
     pointer-events: none;
     transform: translate(-50%, -50%);
-    transition: .1s;
+    transition: .05s;
 }
 
 .cursor-outline {
@@ -260,7 +264,7 @@ img {
     top: 0;
     pointer-events: none;
     transform: translate(-50%, -50%);
-    transition: .15s;
+    transition: .1s;
 }
 
 ::selection {
