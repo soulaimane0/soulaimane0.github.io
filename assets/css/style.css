@@ -362,7 +362,10 @@ img {
 .content {
     height: 100%;
     width: 100%;
-    position: relative;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
 }
 
 #box {
@@ -370,9 +373,6 @@ img {
     height: 50px;
     background: #fff;
     animation: animate .5s linear infinite;
-    position: absolute;
-    top: 50%;
-    left: 50%;
     border-radius: 3px;
 }
 
@@ -404,11 +404,9 @@ img {
     height: 5px;
     background: #000;
     opacity: 0.1;
-    position: absolute;
-    top: calc(50% + 59px);
-    left: 50%;
     border-radius: 50%;
     animation: shadow .5s linear infinite;
+    margin-top: 1rem;
 }
 
 @keyframes shadow {
