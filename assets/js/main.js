@@ -100,3 +100,9 @@ let loaderElem = document.querySelector('#loader');
 window.addEventListener('load', () => {
   loaderElem.style.display = 'none';
 });
+
+document.querySelector('#privateRepo').addEventListener('click', () => {
+  alert(
+    "Sorry, this project's code is stored in a private repository. Feel free to explore the live website to learn more about it!"
+  );
+});
