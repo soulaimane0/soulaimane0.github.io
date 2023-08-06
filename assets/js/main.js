@@ -94,3 +94,9 @@ submitBtn.addEventListener('click', () => {
   formElem.submit();
   formElem.reset();
 });
+
+let loaderElem = document.querySelector('#loader');
+
+window.addEventListener('load', () => {
+  loaderElem.style.display = 'none';
+});
