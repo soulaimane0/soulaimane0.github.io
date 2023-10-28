@@ -165,6 +165,11 @@ img {
     height: 50px;
 }
 
+.avatar span.nodejs-icon {
+    width: 80px;
+    height: 80px;
+}
+
 .avatar span img {
     border-radius: 0.2rem;
 }
@@ -179,6 +184,18 @@ img {
     top: 30%;
     right: -5%;
     animation: typescriptMoves 3s linear infinite;
+}
+
+.avatar .nodejs-icon {
+    top: 50%;
+    left: 0;
+    animation: nodeJstMoves 3s linear infinite;
+}
+
+.avatar .reactjs-icon {
+    bottom: 28%;
+    right: 4%;
+    animation: reactJstMoves 3s linear infinite;
 }
 
 .avatar .vuejs-icon {
@@ -204,6 +221,23 @@ img {
     }
 }
 
+@keyframes nodeJstMoves {
+
+    0%,
+    50%,
+    100% {
+        top: 50%;
+    }
+
+    25% {
+        top: 54%;
+    }
+
+    75% {
+        top: 46%;
+    }
+}
+
 @keyframes typescriptMoves {
 
     0%,
@@ -218,6 +252,23 @@ img {
 
     75% {
         top: 34%;
+    }
+}
+
+@keyframes reactJstMoves {
+
+    0%,
+    50%,
+    100% {
+        bottom: 28%;
+    }
+
+    25% {
+        bottom: 24%;
+    }
+
+    75% {
+        bottom: 32%;
     }
 }
 

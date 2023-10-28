@@ -9,67 +9,105 @@ AOS.init({
   anchorPlacement: 'top-bottom',
 });
 
+const baseSkillsURL =
+  'https://res.cloudinary.com/dihe16lrv/image/upload/f_auto,q_auto/v1/portfolio/skills';
+
 const skills = [
   {
     name: 'HTML',
-    srcImg: './assets/images/html-5-b35dd2c0.png',
+    srcImg: `${baseSkillsURL}/v5hzhthbsdzg4akrsnsl`,
   },
   {
     name: 'CSS',
-    srcImg: './assets/images/css-3-059eb572.png',
+    srcImg: `${baseSkillsURL}/lcxgezddu8kzurmiygla`,
   },
   {
-    name: 'JAVASCRIPT',
-    srcImg: './assets/images/js-30558d7e.png',
+    name: 'JS',
+    srcImg: `${baseSkillsURL}/wiipcxed9tnf2vugvq8g`,
   },
   {
     name: 'C#',
-    srcImg: './assets/images/c-sharp-19211c9f.png',
+    srcImg: `${baseSkillsURL}/j1dqwnzcs6moytkb4pf5`,
   },
   {
     name: 'ASP.NET',
-    srcImg: './assets/images/aspdotnet.png',
+    srcImg: `${baseSkillsURL}/bpigr4pobotr0txeci4j`,
   },
   {
     name: 'VUE.JS',
-    srcImg: './assets/images/vue-js-6897cf02.png',
+    srcImg: `${baseSkillsURL}/kvwkmheulp2q28ogzo1y`,
   },
   {
     name: 'BOOTSTRAP',
-    srcImg: './assets/images/bootstrap-4385031f.png',
+    srcImg: `${baseSkillsURL}/hws3w99nzis4brrujur6`,
   },
   {
     name: 'SASS',
-    srcImg: './assets/images/sass-c6a8ebc8.png',
+    srcImg: `${baseSkillsURL}/xqvbcwqvxjecwffcdhal`,
   },
   {
-    name: 'TYPESCRIPT',
-    srcImg: './assets/images/typescript-f01a041f.png',
+    name: 'TS',
+    srcImg: `${baseSkillsURL}/ijhmheow5b1nxxudzsn9`,
   },
   {
     name: 'SQL',
-    srcImg: './assets/images/microsoft-sql-server-logo.png',
+    srcImg: `${baseSkillsURL}/q17sflz4bljx3c26iahe`,
   },
   {
     name: 'GIT',
-    srcImg: './assets/images/git-f0b50044.png',
+    srcImg: `${baseSkillsURL}/pnkbe2ftu81xjcwrxu6b`,
   },
   {
     name: 'FIGMA',
-    srcImg: './assets/images/figma-0a1384c5.png',
+    srcImg: `${baseSkillsURL}/ee1n4cbhw61vw3cuaa78`,
+  },
+  {
+    name: 'REACT.JS',
+    srcImg: `${baseSkillsURL}/o2nfbmmrhx0fg4spvxdc`,
+  },
+  {
+    name: 'MONGODB',
+    srcImg: `${baseSkillsURL}/hzmp3ehm2iiyw5nzwzih`,
+  },
+  {
+    name: 'NODE.JS',
+    srcImg: `${baseSkillsURL}/jjiq3nl1tkokteqoistd`,
+  },
+  {
+    name: 'EXPRESS.JS',
+    srcImg: `${baseSkillsURL}/z8j8dfxye0qwckz0gzos`,
   },
 ];
 const skillsElement = document.querySelector('#webSkills');
-skills.reverse();
-for (let i = 0; i < skills.length; i++) {
+
+function shuffle(array) {
+  let currentIndex = array.length,
+    randomIndex;
+
+  while (currentIndex > 0) {
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex--;
+
+    [array[currentIndex], array[randomIndex]] = [
+      array[randomIndex],
+      array[currentIndex],
+    ];
+  }
+
+  return array;
+}
+
+shuffle(skills);
+
+skills.forEach((skill) => {
   const elem = `
   <div class="d-flex flex-column justify-content-center align-items-center" style="width:55px;">
-      <img class="opacity-75 shadow-effect" src="${skills[i].srcImg}" alt="${skills[i].name}">
-      <small>${skills[i].name}</small>
+      <img class="opacity-75 shadow-effect" src="${skill.srcImg}" alt="${skill.name}">
+      <small>${skill.name}</small>
   </div>
   `;
   skillsElement.insertAdjacentHTML('afterbegin', elem);
-}
+});
 
 // Mouse move effect
 let cursorElem = document.querySelector('.cursor');
@@ -99,10 +137,4 @@ let loaderElem = document.querySelector('#loader');
 
 window.addEventListener('load', () => {
   loaderElem.style.display = 'none';
-});
-
-document.querySelector('#privateRepo').addEventListener('click', () => {
-  alert(
-    "Sorry, this project's code is stored in a private repository. Feel free to explore the live website to learn more about it!"
-  );
 });
