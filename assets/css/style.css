@@ -125,7 +125,7 @@ img {
 }
 
 .card-custom-image img {
-    object-fit: cover;
+    /* object-fit: cover; */
 }
 
 .social-icon {
@@ -199,7 +199,7 @@ img {
 }
 
 .avatar .vuejs-icon {
-    bottom: 5%;
+    bottom: 10%;
     left: 15%;
     animation: vueJsMoves 3s linear infinite;
 }
@@ -277,15 +277,15 @@ img {
     0%,
     50%,
     100% {
-        bottom: 5%;
+        bottom: 10%;
     }
 
     25% {
-        bottom: 9%;
+        bottom: 14%;
     }
 
     75% {
-        bottom: 1%;
+        bottom: 6%;
     }
 }
 
@@ -358,6 +358,14 @@ img {
     background-color: var(--color-brand);
     border-color: var(--color-brand);
     color: var(--color-base2);
+}
+
+.btn-brand-disabled {
+    background-color: var(--color-brand2) !important;
+    border-color: var(--color-brand2) !important;
+    color: var(--color-base) !important;
+    cursor: not-allowed !important;
+    pointer-events: all !important;
 }
 
 .btn-brand:hover,
